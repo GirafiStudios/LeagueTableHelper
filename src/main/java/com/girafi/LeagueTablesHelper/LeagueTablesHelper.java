@@ -3,23 +3,125 @@ package com.girafi.LeagueTablesHelper;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Scanner;
+import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class LeagueTablesHelper {
 
     public static void main(String[] args) {
-        System.out.println("Choose a type: (Format | Sort | Merge): ");
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        if (input.equalsIgnoreCase("format") || input.equalsIgnoreCase("simple") || input.equalsIgnoreCase("ks") || input.equalsIgnoreCase("fs")) {
-            simple();
-        } else if (input.equalsIgnoreCase("sort") || input.equalsIgnoreCase("ss")) {
-            sort("Input.txt", true);
-        } else if (input.equalsIgnoreCase("merge") || input.equalsIgnoreCase("js")) {
-            merge();
+        try {
+            System.out.println("Choose a type: (Format | Sort | Merge): ");
+            Scanner scanner = new Scanner(System.in);
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("format") || input.equalsIgnoreCase("simple") || input.equalsIgnoreCase("ks") || input.equalsIgnoreCase("fs")) {
+                simple();
+            } else if (input.equalsIgnoreCase("sort") || input.equalsIgnoreCase("ss")) {
+                sort(streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList()), true);
+            } else if (input.equalsIgnoreCase("merge") || input.equalsIgnoreCase("js")) {
+                List<Entry> inputList = streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList());
+                List<Entry> fullPromotion = merge(streamCSV("MergePromotion.txt").map(Entry::fromCSV).toList(), inputList);
+                List<Entry> fullRelegation = merge(streamCSV("MergeRelegation.txt").map(Entry::fromCSV).toList(), inputList);
+                sortList(fullPromotion);
+                sortList(fullRelegation);
+
+                int placing = 0;
+                for (Entry entry : fullPromotion) {
+                    placing++;
+                    entry.print(placing);
+                }
+                for (Entry entry : fullRelegation) {
+                    placing++;
+                    entry.print(placing);
+                }
+            }
+            System.out.println();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        System.out.println();
+    }
+
+    private static List<Entry> sort(List<Entry> entries, boolean print) {
+        entries = new ArrayList<>(entries);
+        sortList(entries);
+
+        if (print) {
+            int placing = 0;
+            for (Entry entry : entries) {
+                placing++;
+                entry.print(placing);
+            }
+        }
+        return entries;
+    }
+
+    public static List<Entry> merge(List<Entry> entries, List<Entry> otherEntries) {
+        var otherEntriesByName = otherEntries.stream()
+                .collect(Collectors.toMap(Entry::name, Function.identity()));
+        return entries.stream().map(entry -> {
+            var other = otherEntriesByName.get(entry.name());
+            return other != null ? Entry.merge(entry, other) : entry;
+        }).collect(Collectors.toCollection(ArrayList::new));
+    }
+
+    private static List<Entry> sortList(List<Entry> list) {
+        list.sort(
+                Comparator.comparingInt(Entry::points)
+                        .thenComparingInt(Entry::goalDifference)
+                        .thenComparingInt(Entry::goalsFor)
+                        .reversed()
+        );
+        return list;
+    }
+
+    private static Stream<String[]> streamCSV(String fileName) throws IOException {
+        return Files.lines(Path.of(fileName), StandardCharsets.ISO_8859_1).map(line -> line.split("\\t|((?!\\d)-(?=\\d))"));
+    }
+
+    private record Entry(String name, int played, int wins, int draws, int losses, int goalsFor, int goalsAgainst,
+                         int points) {
+
+        public int goalDifference() {
+            return goalsFor - goalsAgainst;
+        }
+
+        public void print(int placing) {
+            String tab = "\t";
+            System.out.println(name + tab + tab + tab + tab + placing + tab + played + tab + wins + tab + draws + tab + losses + tab + goalsFor + tab + goalsAgainst + tab + points);
+        }
+
+        public static Entry fromCSV(String[] columns) {
+            return new Entry(
+                    columns[1],
+                    Integer.parseInt(columns[2]),
+                    Integer.parseInt(columns[3]),
+                    Integer.parseInt(columns[4]),
+                    Integer.parseInt(columns[5]),
+                    Integer.parseInt(columns[6]),
+                    Integer.parseInt(columns[7]),
+                    Integer.parseInt(columns[8])
+            );
+        }
+
+        public static Entry merge(Entry first, Entry second) {
+            return new Entry(
+                    first.name(),
+                    first.played() + second.played(),
+                    first.wins() + second.wins(),
+                    first.draws() + second.draws(),
+                    first.losses() + second.losses(),
+                    first.goalsFor() + second.goalsFor(),
+                    first.goalsAgainst() + second.goalsAgainst(),
+                    first.points() + second.points()
+            );
+        }
     }
 
     public static void simple() {
@@ -44,70 +146,6 @@ public class LeagueTablesHelper {
         for (String s : list) {
             System.out.print("\t" + replaceUnwantedCharacters(s.replace("replaceWithNewLine", "\n")));
         }
-    }
-
-    private static List<Map.Entry<String, List<Integer>>> sort(String fileName, boolean printResult) {
-        LinkedHashMap<String, List<Integer>> hashMap = new LinkedHashMap<>();
-
-        for (String input : readInputFile(fileName)) {
-            String[] data = input.split("\\t|((?!\\d)-(?=\\d))");
-
-            List<Integer> leagueEntries = new ArrayList<>();
-            leagueEntries.add(0, Integer.parseInt(data[2])); //Played
-            leagueEntries.add(1, Integer.parseInt(data[3])); //Wins
-            leagueEntries.add(2, Integer.parseInt(data[4])); //Draws
-            leagueEntries.add(3, Integer.parseInt(data[5])); //Loses
-            leagueEntries.add(4, Integer.parseInt(data[6])); //Goals For
-            leagueEntries.add(5, Integer.parseInt(data[7])); //Goals Against
-            leagueEntries.add(6, Integer.parseInt(data[8])); //Points
-            hashMap.put("replaceWithNewLine" + data[1], leagueEntries); //Team name, used as HashMap identifier
-        }
-
-        Set<Map.Entry<String, List<Integer>>> entriesToBeSorted = hashMap.entrySet();
-
-        Comparator<Map.Entry<String, List<Integer>>> comparator = (o1, o2) -> {
-            int points = o1.getValue().get(6);
-            int points2 = o2.getValue().get(6);
-
-            if (points == points2) {
-                int goalFor = o1.getValue().get(4);
-                int goalAgainst = o1.getValue().get(5);
-                int goalFor2 = o2.getValue().get(4);
-                int goalAgainst2 = o2.getValue().get(5);
-                int goalDifference = goalFor - goalAgainst;
-                int goalDifference2 = goalFor2 - goalAgainst2;
-                if (goalDifference == goalDifference2) {
-                    return Integer.compare(goalFor2, goalFor);
-                } else {
-                    return Integer.compare(goalDifference2, goalDifference);
-                }
-            } else {
-                return Integer.compare(points2, points);
-            }
-        };
-
-        List<Map.Entry<String, List<Integer>>> entries = new ArrayList<>(entriesToBeSorted);
-        entries.sort(comparator);
-
-        if (printResult) {
-            int placing = 0;
-            for (Map.Entry<String, List<Integer>> entry : entries) {
-                String s = entry.getKey();
-                placing++;
-                System.out.print("\t" + replaceUnwantedCharacters(s.replace("replaceWithNewLine", "\n") + "\t\t\t\t" + placing + hashMap.get(s).stream().map(m -> "\t" + m).collect(Collectors.toList())));
-            }
-            System.out.println();
-        }
-        return entries;
-    }
-
-    public static void merge() {
-        List<Map.Entry<String, List<Integer>>> fallStage = sort("Input.txt", false);
-        List<Map.Entry<String, List<Integer>>> promotionStage = sort("MergePromotion.txt", false);
-        List<Map.Entry<String, List<Integer>>> relegationStage = sort("MergeRelegation.txt", false);
-        List<Map.Entry<String, List<String>>> combined = new ArrayList<>();
-
-        
     }
 
     public static List<String> readInputFile(String fileName) {
