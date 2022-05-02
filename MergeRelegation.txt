@@ -1,19 +1,14 @@
-1	Thisted FC	10	5	3	2	31-15	18	
-2	Hobro IK	10	5	2	3	18-15	17	
-3	Løgstør IF	10	5	1	4	22-13	16	
-4	Jetsmark IF	10	5	1	4	13-16	16	
-5	Aalborg Freja	10	3	2	5	17-19	11	
-6	Gundersted IF	10	2	1	7	10-33	7
-1	Helsted Fremad IF	12	7	2	3	33-25	23	
-2	IFSK	12	6	4	2	26-10	22	
-3	Hornbæk SF	12	5	4	3	22-16	19	
-4	Christiansbjerg IF	12	5	3	4	18-20	18	
-5	Viborg FF	12	6	0	6	28-29	18	
-6	Hasle B	12	2	4	6	22-34	10	
-7	VSK Aarhus	12	2	1	9	13-28	7
-1	Give Fremad	10	7	1	2	23-10	22	
-2	Horsens Freja	10	6	3	1	18-8	21	
-3	Egen UI	10	5	3	2	17-12	18	
-4	Agerbæk SF/Starup IF	10	3	2	5	13-20	11	
-5	FC Skanderborg	10	2	3	5	19-20	9	
-6	Varde IF	10	0	2	8	6-26	2
+1	Fredensborg BI	19	11	2	6	39-31	35	
+2	Lundtofte Boldklub	19	7	5	7	27-31	26	
+3	Snekkersten IF	19	7	3	9	33-34	24	
+4	Farum BK	19	5	5	9	32-41	20	
+5	LSF	19	5	4	10	29-35	19	
+6	Hundested IK	19	3	4	12	25-44	13	
+7	Stenløse BK	19	1	4	14	21-42	7
+1	Haslev FC	19	8	2	9	42-40	26	
+2	FC Nakskov	19	8	2	9	43-55	26	
+3	NFB	19	6	4	9	35-57	22	
+4	Køge BK	19	7	0	12	38-46	21	
+5	Herlufsholm GF	19	5	4	10	26-38	19	
+6	Væggerløse	19	4	0	15	30-64	12	
+7	LUIF	19	2	1	16	20-67	7

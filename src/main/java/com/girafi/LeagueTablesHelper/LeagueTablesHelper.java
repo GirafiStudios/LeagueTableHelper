@@ -32,14 +32,16 @@ public class LeagueTablesHelper {
                 sortList(fullPromotion);
                 sortList(fullRelegation);
 
+                String js1 = "\t\t" + "JS1";
+                String js2 = "\t\t" + "JS2";
                 int placing = 0;
                 for (Entry entry : fullPromotion) {
                     placing++;
-                    entry.print(placing);
+                    entry.print(placing, input.equalsIgnoreCase("js") ? js1 : "");
                 }
                 for (Entry entry : fullRelegation) {
                     placing++;
-                    entry.print(placing);
+                    entry.print(placing, input.equalsIgnoreCase("js") ? js2 : "");
                 }
             }
             System.out.println();
@@ -85,16 +87,15 @@ public class LeagueTablesHelper {
         return Files.lines(Path.of(fileName), StandardCharsets.ISO_8859_1).map(line -> line.split("\\t|((?!\\d)-(?=\\d))"));
     }
 
-    private record Entry(String name, int played, int wins, int draws, int losses, int goalsFor, int goalsAgainst,
-                         int points) {
+    private record Entry(String name, int played, int wins, int draws, int losses, int goalsFor, int goalsAgainst, int points) {
 
         public int goalDifference() {
             return goalsFor - goalsAgainst;
         }
 
-        public void print(int placing) {
+        public void print(int placing, String... additional) {
             String tab = "\t";
-            System.out.println(name + tab + tab + tab + tab + placing + tab + played + tab + wins + tab + draws + tab + losses + tab + goalsFor + tab + goalsAgainst + tab + points);
+            System.out.println(name + tab + tab + tab + tab + placing + tab + played + tab + wins + tab + draws + tab + losses + tab + goalsFor + tab + goalsAgainst + tab + points + tab + additional[0]);
         }
 
         public static Entry fromCSV(String[] columns) {
