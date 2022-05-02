@@ -95,7 +95,7 @@ public class LeagueTablesHelper {
 
         public void print(int placing, String... additional) {
             String tab = "\t";
-            System.out.println(name + tab + tab + tab + tab + placing + tab + played + tab + wins + tab + draws + tab + losses + tab + goalsFor + tab + goalsAgainst + tab + points + tab + additional[0]);
+            System.out.println(name + tab + tab + tab + tab + placing + tab + played + tab + wins + tab + draws + tab + losses + tab + goalsFor + tab + goalsAgainst + tab + points + (additional.length > 0 ? tab + additional[0] : ""));
         }
 
         public static Entry fromCSV(String[] columns) {

@@ -1,28 +1,32 @@
-1	Herstedøster IC	26	10	3	0	31-15	33	
-2	Hørsholm-Usserød IK	26	8	3	2	34-23	27	
-3	Glostrup	26	8	2	3	32-21	26	
-4	VB 1968	26	7	3	3	27-21	24	
-5	Liria FK	26	7	1	5	28-24	22	
-6	Albertslund IF	26	6	2	5	27-24	20	
-7	Vallensbæk IF	26	6	1	6	28-27	19	
-8	Fredensborg BI	26	6	1	6	24-24	19	
-9	Lundtofte Boldklub	26	5	3	5	22-23	18	
-10	Snekkersten IF	26	5	1	7	23-25	16	
-11	LSF	26	4	1	8	17-24	13	
-12	Farum BK	26	4	1	8	24-35	13	
-13	Hundested IK	26	2	2	9	18-31	8	
-14	Stenløse BK	26	0	2	11	13-31	2
-1	Ringsted IF	26	11	2	0	43-10	35	
-2	Solrød FC	26	10	2	1	46-14	32	
-3	Gørslev IF	26	10	1	2	40-14	31	
-4	Næstved I.F.	26	7	5	1	29-14	26	
-5	Slagelse B&I	26	7	3	3	34-20	24	
-6	Tuse IF	26	7	1	5	34-22	22	
-7	Nykøbing FC	26	4	5	4	22-21	17	
-8	Haslev FC	26	5	1	7	27-32	16	
-9	FC Nakskov	26	5	1	7	21-41	16	
-10	NFB	26	3	4	6	24-34	13	
-11	Herlufsholm GF	26	2	2	9	10-27	8	
-12	LUIF	26	2	1	10	15-48	7	
-13	Køge BK	26	2	0	11	16-38	6	
-14	Væggerløse	26	2	0	11	19-45	6
+1	Løgstør IF	14	9	2	3	31-23	29	
+2	Aalborg Freja	14	8	3	3	28-15	27	
+3	Lindholm IF	14	8	2	4	34-25	26	
+4	IF Skjold Sæby	14	6	2	6	27-25	20	
+5	Birkelse IF	14	5	1	8	24-29	16	
+6	Skive IK	14	4	3	7	22-31	15	
+7	Jetsmark IF	14	3	4	7	21-34	13	
+8	Thisted FC	14	3	3	8	18-23	12	
+1	Brabrand IF	14	9	2	3	35-16	29	
+2	Vorup FB	14	8	2	4	42-27	26	
+3	DGL 2000, Aarhus	14	8	1	5	19-20	25	
+4	Lystrup IF	14	7	1	6	36-35	22	
+5	Fuglebakken	14	5	2	7	21-26	17	
+6	Grenaa IF	14	5	1	8	23-34	16	
+7	Kristrup B	14	5	1	8	26-32	16	
+8	Hornbæk SF	14	3	2	9	25-37	11
+1	Holstebro B	14	9	3	2	42-24	30	
+2	Herning Fremad	14	7	3	4	39-26	24	
+3	Silkeborg IF	14	7	2	5	23-32	23	
+4	Vildbjerg SF	14	6	4	4	31-21	22	
+5	Hatting/Torsted	14	5	6	3	32-23	21	
+6	Kjellerup IF	14	5	4	5	25-31	19	
+7	Tjørring IF	14	4	2	8	22-33	14	
+8	Viborg FF	14	1	0	13	20-44	3
+1	FC Sønderborg	14	10	2	2	35-16	32	
+2	Vejen SF	14	7	3	4	26-19	24	
+3	Sædding/G IF	14	7	3	4	22-13	24	
+4	KSC Harte	14	6	2	6	27-29	20	
+5	Esbjerg IF 92	14	6	2	6	27-26	20	
+6	Esbjerg fB	14	5	3	6	23-20	18	
+7	Fredericia fF	14	3	4	7	17-23	13	
+8	Christiansfeld IF	14	2	1	11	24-55	7
