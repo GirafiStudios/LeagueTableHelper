@@ -1,16 +1,6 @@
-1	Hirtshals B	14	9	5	0	46-19	32	
-2	Dronningborg B	14	10	2	2	36-19	32	
-3	Skive IK	14	6	3	5	24-23	21	
-4	Birkelse IF	14	4	6	4	27-21	18	
-5	Kjellerup IF	14	5	3	6	30-31	18	
-6	Viborg Sdrm. IK	14	4	3	7	25-32	15	
-7	Kristrup B	14	3	4	7	25-40	13	
-8	Grenaa IF	14	1	2	11	15-43	5
-1	Tjørring IF	14	10	4	0	31-12	34	
-2	Esbjerg fB	14	7	2	5	25-18	23	
-3	Brædstrup IF	14	6	3	5	28-18	21	
-4	Hatting/Torsted	14	6	3	5	24-20	21	
-5	Fuglebakken KFUM Århus	14	5	3	6	24-31	18	
-6	Esbjerg IF 92	14	4	4	6	25-31	16	
-7	Kolding IF	14	4	2	8	16-26	14	
-8	Ringkøbing IF	14	3	1	10	20-37	10
+1	Viborg	32	10	14	8	45-43	44	
+2	OB	32	8	14	10	45-46	38	
+3	FC Nordsjælland	32	8	12	12	38-47	36	
+4	AGF	32	6	12	14	31-43	30	
+5	Vejle Boldklub	32	7	8	17	31-60	29	
+6	SønderjyskE	32	4	11	17	28-54	23	

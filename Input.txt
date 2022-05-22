@@ -1,32 +1,12 @@
-1	Løgstør IF	14	9	2	3	31-23	29	
-2	Aalborg Freja	14	8	3	3	28-15	27	
-3	Lindholm IF	14	8	2	4	34-25	26	
-4	IF Skjold Sæby	14	6	2	6	27-25	20	
-5	Birkelse IF	14	5	1	8	24-29	16	
-6	Skive IK	14	4	3	7	22-31	15	
-7	Jetsmark IF	14	3	4	7	21-34	13	
-8	Thisted FC	14	3	3	8	18-23	12	
-1	Brabrand IF	14	9	2	3	35-16	29	
-2	Vorup FB	14	8	2	4	42-27	26	
-3	DGL 2000, Aarhus	14	8	1	5	19-20	25	
-4	Lystrup IF	14	7	1	6	36-35	22	
-5	Fuglebakken	14	5	2	7	21-26	17	
-6	Grenaa IF	14	5	1	8	23-34	16	
-7	Kristrup B	14	5	1	8	26-32	16	
-8	Hornbæk SF	14	3	2	9	25-37	11
-1	Holstebro B	14	9	3	2	42-24	30	
-2	Herning Fremad	14	7	3	4	39-26	24	
-3	Silkeborg IF	14	7	2	5	23-32	23	
-4	Vildbjerg SF	14	6	4	4	31-21	22	
-5	Hatting/Torsted	14	5	6	3	32-23	21	
-6	Kjellerup IF	14	5	4	5	25-31	19	
-7	Tjørring IF	14	4	2	8	22-33	14	
-8	Viborg FF	14	1	0	13	20-44	3
-1	FC Sønderborg	14	10	2	2	35-16	32	
-2	Vejen SF	14	7	3	4	26-19	24	
-3	Sædding/G IF	14	7	3	4	22-13	24	
-4	KSC Harte	14	6	2	6	27-29	20	
-5	Esbjerg IF 92	14	6	2	6	27-26	20	
-6	Esbjerg fB	14	5	3	6	23-20	18	
-7	Fredericia fF	14	3	4	7	17-23	13	
-8	Christiansfeld IF	14	2	1	11	24-55	7
+1	F.C. København	32	20	8	4	56-19	68	
+2	FC Midtjylland	32	20	5	7	59-33	65	
+3	Silkeborg IF	32	13	10	9	54-37	49	
+4	Brøndby IF	32	13	9	10	40-41	48	
+5	AaB	32	13	6	13	47-45	45	
+6	Randers FC	32	12	7	13	36-42	43
+1	Viborg	32	10	14	8	45-43	44	
+2	OB	32	8	14	10	45-46	38	
+3	FC Nordsjælland	32	8	12	12	38-47	36	
+4	AGF	32	6	12	14	31-43	30	
+5	Vejle Boldklub	32	7	8	17	31-60	29	
+6	SønderjyskE	32	4	11	17	28-54	23	

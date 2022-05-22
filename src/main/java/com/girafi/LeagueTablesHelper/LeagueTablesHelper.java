@@ -18,13 +18,21 @@ public class LeagueTablesHelper {
 
     public static void main(String[] args) {
         try {
-            System.out.println("Choose a type: (Format | Sort | Merge): ");
+            System.out.println("Choose a type: (Format | Sort | Combine | Merge): ");
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             if (input.equalsIgnoreCase("format") || input.equalsIgnoreCase("simple") || input.equalsIgnoreCase("ks") || input.equalsIgnoreCase("fs")) {
                 simple();
             } else if (input.equalsIgnoreCase("sort") || input.equalsIgnoreCase("ss")) {
                 sort(streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList()), true);
+            } else if (input.equalsIgnoreCase("combine")) {
+                List<Entry> inputList = streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList());
+
+                int placing = 0;
+                for (Entry entry : inputList) {
+                    placing++;
+                    entry.print(placing);
+                }
             } else if (input.equalsIgnoreCase("merge") || input.equalsIgnoreCase("js")) {
                 List<Entry> inputList = streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList());
                 List<Entry> fullPromotion = merge(streamCSV("MergePromotion.txt").map(Entry::fromCSV).toList(), inputList);
