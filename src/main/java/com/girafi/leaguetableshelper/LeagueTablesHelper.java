@@ -1,4 +1,4 @@
-package com.girafi.LeagueTablesHelper;
+package com.girafi.leaguetableshelper;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

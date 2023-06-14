@@ -1,12 +1,28 @@
-1	F.C. København	32	20	8	4	56-19	68	
-2	FC Midtjylland	32	20	5	7	59-33	65	
-3	Silkeborg IF	32	13	10	9	54-37	49	
-4	Brøndby IF	32	13	9	10	40-41	48	
-5	AaB	32	13	6	13	47-45	45	
-6	Randers FC	32	12	7	13	36-42	43
-1	Viborg	32	10	14	8	45-43	44	
-2	OB	32	8	14	10	45-46	38	
-3	FC Nordsjælland	32	8	12	12	38-47	36	
-4	AGF	32	6	12	14	31-43	30	
-5	Vejle Boldklub	32	7	8	17	31-60	29	
-6	SønderjyskE	32	4	11	17	28-54	23	
+1	Glostrup	26	20	5	1	78-22	65	
+2	Hørsholm-Usserød IK	26	18	5	3	86-30	59	
+3	Fredensborg BI	26	16	1	9	77-45	49	
+4	BSF	26	13	7	6	59-34	46	
+5	Espergærde IF	26	15	1	10	73-53	46	
+6	IF Skjold Birkerød	26	12	5	9	51-52	41	
+7	FC Rudersdal	26	10	9	7	55-42	39	
+8	Snekkersten IF	26	11	6	9	46-49	39	
+9	Taastrup FC	26	9	7	10	44-44	34	
+10	Farum BK	26	8	6	12	51-54	30	
+11	Avedøre IF	26	9	0	17	40-68	27	
+12	BK Avarta	26	5	4	17	37-65	19	
+13	Lundtofte Boldklub	26	2	6	18	33-76	12	
+14	Liria FK	26	2	2	22	24-120	8
+1	Ringsted IF	26	19	4	3	86-25	61	
+2	Roskilde Boldklub	26	19	4	3	83-28	61	
+3	Tuse IF	26	17	5	4	65-28	56	
+4	Såby Fodbold	26	17	3	6	85-43	54	
+5	NFB	26	15	4	7	52-36	49	
+6	FC Nakskov	26	14	4	8	68-59	46	
+7	Nykøbing FC	26	13	3	10	59-37	42	
+8	Solrød FC	26	9	4	13	43-42	31	
+9	Slagelse B&I	26	9	3	14	40-57	30	
+10	Vordingborg IF	26	6	5	15	36-52	23	
+11	B. Frem	26	7	1	18	45-82	22	
+12	Herfølge BK	26	6	3	17	34-75	21	
+13	Køge Nord FC	26	6	3	17	32-75	21	
+14	LUIF	26	1	2	23	22-111	5

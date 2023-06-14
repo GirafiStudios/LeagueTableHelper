@@ -6,7 +6,7 @@ apply plugin: 'application'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-mainClassName = 'com.girafi.LeagueTablesHelper'
+mainClassName = 'com.girafi.leaguetableshelper.LeagueTablesHelper'
 
 jar {
     baseName = 'LeagueTablesHelper'
