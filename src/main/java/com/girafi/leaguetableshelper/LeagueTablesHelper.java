@@ -1,4 +1,4 @@
-package com.girafi.leaguetableshelper;
+package com.girafi.LeagueTablesHelper;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -15,10 +15,12 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class LeagueTablesHelper {
+    public static final int YEAR_START = 2023;
+    public static final int YEAR_END = 2024;
 
     public static void main(String[] args) {
         try {
-            System.out.println("Choose a type: (Format | Sort | Combine | Merge): ");
+            System.out.println("Choose a type: (Format | Sort | Combine | Merge | JS | DS): ");
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             if (input.equalsIgnoreCase("format") || input.equalsIgnoreCase("simple") || input.equalsIgnoreCase("ks") || input.equalsIgnoreCase("fs")) {
@@ -35,26 +37,40 @@ public class LeagueTablesHelper {
                 }
             } else if (input.equalsIgnoreCase("merge") || input.equalsIgnoreCase("js")) {
                 List<Entry> inputList = streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList());
-                List<Entry> fullPromotion = merge(streamCSV("MergePromotion.txt").map(Entry::fromCSV).toList(), inputList);
-                List<Entry> fullRelegation = merge(streamCSV("MergeRelegation.txt").map(Entry::fromCSV).toList(), inputList);
-                sortList(fullPromotion);
-                sortList(fullRelegation);
+                merge(input, mergeLists(streamCSV("MergePromotion.txt").map(Entry::fromCSV).toList(), inputList), mergeLists(streamCSV("MergeRelegation.txt").map(Entry::fromCSV).toList(), inputList));
+            } else if (input.equalsIgnoreCase("ds")) { //How to use: Put all teams in both groups for MergePromotion & Merge Relegation. Put the teams in the DS Pulje you need the league table for in Input
+                List<Entry> inputList = streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList());
+                List<String> inputNames = inputList.stream().map(entry -> entry.name).toList();
+                List<Entry> fullPromotion = mergeLists(streamCSV("MergePromotion.txt").map(Entry::fromCSV).toList(), new ArrayList<>());
+                List<Entry> fullRelegation = mergeLists(streamCSV("MergeRelegation.txt").map(Entry::fromCSV).toList(), new ArrayList<>());
 
-                String js1 = "\t\t" + "JS1";
-                String js2 = "\t\t" + "JS2";
-                int placing = 0;
-                for (Entry entry : fullPromotion) {
-                    placing++;
-                    entry.print(placing, input.equalsIgnoreCase("js") ? js1 : "");
-                }
-                for (Entry entry : fullRelegation) {
-                    placing++;
-                    entry.print(placing, input.equalsIgnoreCase("js") ? js2 : "");
-                }
+                fullPromotion.removeIf(fp -> !inputNames.contains(fp.name));
+                fullRelegation.removeIf(fp -> !inputNames.contains(fp.name));
+
+                merge(input, fullPromotion, fullRelegation);
             }
             System.out.println();
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public static void merge(String input, List<Entry> fullPromotion, List<Entry> fullRelegation) throws IOException {
+        sortList(fullPromotion);
+        sortList(fullRelegation);
+
+        String js1 = "\t\t" + "JS1";
+        String js2 = "\t\t" + "JS2";
+        String promotion = "\t\t" + "Promotion Stage";
+        String relegation = "\t\t" + "Relegation Stage";
+        int placing = 0;
+        for (Entry entry : fullPromotion) {
+            placing++;
+            entry.print(placing, input.equalsIgnoreCase("js") ? js1 : promotion);
+        }
+        for (Entry entry : fullRelegation) {
+            placing++;
+            entry.print(placing, input.equalsIgnoreCase("js") ? js2 : relegation);
         }
     }
 
@@ -72,7 +88,7 @@ public class LeagueTablesHelper {
         return entries;
     }
 
-    public static List<Entry> merge(List<Entry> entries, List<Entry> otherEntries) {
+    public static List<Entry> mergeLists(List<Entry> entries, List<Entry> otherEntries) {
         var otherEntriesByName = otherEntries.stream()
                 .collect(Collectors.toMap(Entry::name, Function.identity()));
         return entries.stream().map(entry -> {
@@ -103,8 +119,7 @@ public class LeagueTablesHelper {
 
         public void print(int placing, String... additional) {
             String tab = "\t";
-            System.out.println(name + tab + tab + tab + tab + placing + tab + played + tab + wins + tab + draws + tab + losses + tab + goalsFor + tab + goalsAgainst + tab + points + (additional.length > 0 ? tab + additional[0] : ""));
-        }
+            System.out.println(name + tab + YEAR_START + tab + YEAR_END + tab + tab + placing + tab + played + tab + wins + tab + draws + tab + losses + tab + goalsFor + tab + goalsAgainst + tab + points + tab + 1 + tab + (additional.length > 0 ? additional[0].replace(tab, "") : ""));       }
 
         public static Entry fromCSV(String[] columns) {
             return new Entry(
