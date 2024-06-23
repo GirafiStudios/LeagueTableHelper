@@ -1,4 +1,4 @@
-package com.girafi.LeagueTablesHelper;
+package com.girafi.leaguetableshelper;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,10 +6,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -150,7 +147,10 @@ public class LeagueTablesHelper {
 
     public static void simple() {
         List<String> list = new ArrayList<>();
-        for (String input : readInputFile("Input.txt")) {
+
+        List<String> readInputList = readInputFile("Input.txt");
+        Collections.reverse(readInputList);
+        for (String input : readInputList) {
             String[] data = input.split("\\t|((?!\\d)-(?=\\d))");
 
             list.add(0, "replaceWithNewLine" + data[1]); //Team
@@ -165,6 +165,7 @@ public class LeagueTablesHelper {
             list.add(9, data[6]); //Goals For
             list.add(10, data[7]); //Goals Against
             list.add(11, data[8]); //Points
+            list.add(12, "1"); //Overall
         }
 
         for (String s : list) {

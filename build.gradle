@@ -4,11 +4,11 @@ repositories {
 apply plugin: 'java'
 apply plugin: 'application'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 mainClassName = 'com.girafi.leaguetableshelper.LeagueTablesHelper'
 
 jar {
-    baseName = 'LeagueTablesHelper'
+    archivesBaseName = 'LeagueTablesHelper'
     version =  '0.1.0'
 }
