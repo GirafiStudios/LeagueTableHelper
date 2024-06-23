@@ -154,8 +154,8 @@ public class LeagueTablesHelper {
             String[] data = input.split("\\t|((?!\\d)-(?=\\d))");
 
             list.add(0, "replaceWithNewLine" + data[1]); //Team
-            list.add(1, ""); //Empty for Excel output purposes
-            list.add(2, ""); //Empty for Excel output purposes
+            list.add(1, String.valueOf(YEAR_START));
+            list.add(2, String.valueOf(YEAR_END));
             list.add(3, ""); //Empty for Excel output purposes
             list.add(4, data[0]); // Placing
             list.add(5, data[2]); // Played
