@@ -1,28 +1,40 @@
-1	Glostrup	26	20	5	1	78-22	65	
-2	Hørsholm-Usserød IK	26	18	5	3	86-30	59	
-3	Fredensborg BI	26	16	1	9	77-45	49	
-4	BSF	26	13	7	6	59-34	46	
-5	Espergærde IF	26	15	1	10	73-53	46	
-6	IF Skjold Birkerød	26	12	5	9	51-52	41	
-7	FC Rudersdal	26	10	9	7	55-42	39	
-8	Snekkersten IF	26	11	6	9	46-49	39	
-9	Taastrup FC	26	9	7	10	44-44	34	
-10	Farum BK	26	8	6	12	51-54	30	
-11	Avedøre IF	26	9	0	17	40-68	27	
-12	BK Avarta	26	5	4	17	37-65	19	
-13	Lundtofte Boldklub	26	2	6	18	33-76	12	
-14	Liria FK	26	2	2	22	24-120	8
-1	Ringsted IF	26	19	4	3	86-25	61	
-2	Roskilde Boldklub	26	19	4	3	83-28	61	
-3	Tuse IF	26	17	5	4	65-28	56	
-4	Såby Fodbold	26	17	3	6	85-43	54	
-5	NFB	26	15	4	7	52-36	49	
-6	FC Nakskov	26	14	4	8	68-59	46	
-7	Nykøbing FC	26	13	3	10	59-37	42	
-8	Solrød FC	26	9	4	13	43-42	31	
-9	Slagelse B&I	26	9	3	14	40-57	30	
-10	Vordingborg IF	26	6	5	15	36-52	23	
-11	B. Frem	26	7	1	18	45-82	22	
-12	Herfølge BK	26	6	3	17	34-75	21	
-13	Køge Nord FC	26	6	3	17	32-75	21	
-14	LUIF	26	1	2	23	22-111	5
+1	Jetsmark IF	14	7	5	2	33-23	26	
+2	Fuglebakken KFUM	14	8	1	5	29-17	25	
+3	Grenaa IF	14	7	3	4	35-33	24	
+4	Aalborg Freja	14	7	3	4	22-19	24	
+5	tst Fodbold	14	5	3	6	23-28	18	
+6	Randers Freja	14	5	1	8	23-27	16	
+7	Gug B	14	3	3	8	17-28	12	
+8	Brabrand IF	14	3	3	8	18-25	12
+1	Bredballe IF	14	9	3	2	27-8	30	
+2	Herning Fremad	14	8	4	2	35-22	28	
+3	ASA, Aarhus	14	7	4	3	32-18	25	
+4	Kolding B	14	6	2	6	32-28	20	
+5	Aarhus 1900	14	6	2	6	23-22	20	
+6	FC Sydvest 05 Tønder	14	5	1	8	19-32	16	
+7	Vatanspor	14	2	3	9	19-36	9	
+8	Sædding/G IF	14	2	3	9	16-37	9	
+1	Vejgaard B	14	10	0	4	32-21	30	
+2	Thisted FC	14	9	2	3	35-21	29	
+3	Aalborg Chang	14	6	4	4	21-17	22	
+4	Løgstør IF	14	7	1	6	38-35	22	
+5	LKB/Gistrup	14	6	3	5	24-27	21	
+6	Kristrup B	14	5	3	6	26-33	18	
+7	Hjørring IF	14	3	1	10	24-33	10	
+8	Aars IK	14	2	2	10	17-30	8
+1	Aabyhøj IF	14	11	2	1	44-12	35	
+2	Odder IGF	14	9	1	4	32-20	28	
+3	Lemming IF	14	7	3	4	22-24	24	
+4	TRIF	14	6	3	5	33-19	21	
+5	Holstebro B	14	6	1	7	30-21	19	
+6	BK Klitten	14	5	1	8	22-30	16	
+7	Ølstrup GU	14	3	2	9	21-39	11	
+8	Søften GF	14	2	1	11	16-55	7	
+1	Esbjerg fB	14	13	1	0	51-9	40	
+2	Give Fremad	14	7	3	4	33-25	24	
+3	Egen UI	14	6	4	4	34-28	22	
+4	Vejle B	14	4	6	4	29-30	18
+5	Bramming B	14	5	2	7	31-35	17	
+6	Fredericia fF	14	4	3	7	38-42	15	
+7	Broager UI	14	4	1	9	24-44	13
+8	Kolding IF	14	2	2	10	23-50	8

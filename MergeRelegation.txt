@@ -1,6 +1,24 @@
-1	Viborg	32	10	14	8	45-43	44	
-2	OB	32	8	14	10	45-46	38	
-3	FC Nordsjælland	32	8	12	12	38-47	36	
-4	AGF	32	6	12	14	31-43	30	
-5	Vejle Boldklub	32	7	8	17	31-60	29	
-6	SønderjyskE	32	4	11	17	28-54	23	
+1	Løgstør IF	14	9	2	3	36-27	29	
+2	Aalborg Chang	14	7	4	3	26-21	25	
+3	Aalborg KFUM	14	8	1	5	31-16	25	
+4	Hornbæk SF	14	5	4	5	22-23	19	
+5	Gug B	14	4	5	5	26-18	17	
+6	IF Skjold Sæby	14	3	5	6	23-31	14	
+7	LKB/Gistrup	14	1	10	3	18-24	13	
+8	Randers Freja	14	3	1	10	17-39	10
+1	Viborg FF	14	8	2	4	40-30	26	
+2	Aarhus Black Vipers	14	7	3	4	39-28	24	
+3	Vatanspor	14	6	4	4	27-29	22	
+4	Holstebro B	14	6	2	6	31-30	20	
+5	Lemming IF	14	6	1	7	23-24	19	
+6	TRIF	14	5	2	7	21-22	17	
+7	Brabrand IF	14	4	4	6	17-25	16	
+8	Ikast FC	14	4	2	8	27-37	14	
+1	Fredericia fF	14	12	0	2	51-18	36	
+2	Sædding/G IF	14	7	5	2	34-24	26	
+3	Aabenraa BK	14	5	4	5	31-30	19	
+4	Bramming B	14	5	4	5	29-29	19	
+5	Egen UI	14	3	5	6	20-32	14	
+6	BK Klitten	14	3	4	7	16-26	13	
+7	FC Sydvest 05 Tønder	14	3	4	7	16-26	13	
+8	Vejle B	14	2	6	6	15-27	12	
