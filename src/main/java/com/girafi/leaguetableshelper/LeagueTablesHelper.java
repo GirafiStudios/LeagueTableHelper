@@ -12,8 +12,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class LeagueTablesHelper {
-    public static final int YEAR_START = 2023;
-    public static final int YEAR_END = 2024;
+    public static final int YEAR_START = 2024;
+    public static final int YEAR_END = 2025;
 
     public static void main(String[] args) {
         try {
@@ -32,7 +32,7 @@ public class LeagueTablesHelper {
                     placing++;
                     entry.print(placing);
                 }
-            } else if (input.equalsIgnoreCase("merge") || input.equalsIgnoreCase("js")) {
+            } else if (input.equalsIgnoreCase("merge") || input.equalsIgnoreCase("js")) { //Only use Promotion/Relegation file for playable leagues.
                 List<Entry> inputList = streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList());
                 merge(input, mergeLists(streamCSV("MergePromotion.txt").map(Entry::fromCSV).toList(), inputList), mergeLists(streamCSV("MergeRelegation.txt").map(Entry::fromCSV).toList(), inputList));
             } else if (input.equalsIgnoreCase("ds")) { //How to use: Put all teams in both groups for MergePromotion & Merge Relegation. Put the teams in the DS Pulje you need the league table for in Input

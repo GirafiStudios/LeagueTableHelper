@@ -1,40 +1,14 @@
-1	Jetsmark IF	14	7	5	2	33-23	26	
-2	Fuglebakken KFUM	14	8	1	5	29-17	25	
-3	Grenaa IF	14	7	3	4	35-33	24	
-4	Aalborg Freja	14	7	3	4	22-19	24	
-5	tst Fodbold	14	5	3	6	23-28	18	
-6	Randers Freja	14	5	1	8	23-27	16	
-7	Gug B	14	3	3	8	17-28	12	
-8	Brabrand IF	14	3	3	8	18-25	12
-1	Bredballe IF	14	9	3	2	27-8	30	
-2	Herning Fremad	14	8	4	2	35-22	28	
-3	ASA, Aarhus	14	7	4	3	32-18	25	
-4	Kolding B	14	6	2	6	32-28	20	
-5	Aarhus 1900	14	6	2	6	23-22	20	
-6	FC Sydvest 05 Tønder	14	5	1	8	19-32	16	
-7	Vatanspor	14	2	3	9	19-36	9	
-8	Sædding/G IF	14	2	3	9	16-37	9	
-1	Vejgaard B	14	10	0	4	32-21	30	
-2	Thisted FC	14	9	2	3	35-21	29	
-3	Aalborg Chang	14	6	4	4	21-17	22	
-4	Løgstør IF	14	7	1	6	38-35	22	
-5	LKB/Gistrup	14	6	3	5	24-27	21	
-6	Kristrup B	14	5	3	6	26-33	18	
-7	Hjørring IF	14	3	1	10	24-33	10	
-8	Aars IK	14	2	2	10	17-30	8
-1	Aabyhøj IF	14	11	2	1	44-12	35	
-2	Odder IGF	14	9	1	4	32-20	28	
-3	Lemming IF	14	7	3	4	22-24	24	
-4	TRIF	14	6	3	5	33-19	21	
-5	Holstebro B	14	6	1	7	30-21	19	
-6	BK Klitten	14	5	1	8	22-30	16	
-7	Ølstrup GU	14	3	2	9	21-39	11	
-8	Søften GF	14	2	1	11	16-55	7	
-1	Esbjerg fB	14	13	1	0	51-9	40	
-2	Give Fremad	14	7	3	4	33-25	24	
-3	Egen UI	14	6	4	4	34-28	22	
-4	Vejle B	14	4	6	4	29-30	18
-5	Bramming B	14	5	2	7	31-35	17	
-6	Fredericia fF	14	4	3	7	38-42	15	
-7	Broager UI	14	4	1	9	24-44	13
-8	Kolding IF	14	2	2	10	23-50	8
+1	Skovshoved IF	26	19	5	2	75-33	62
+2	FB	26	19	4	3	77-20	61
+3	FA2000	26	19	2	5	91-46	59
+4	Husum Bk.	26	13	5	8	66-54	44
+5	NB Bornholm	26	13	3	10	70-55	42
+6	Kastrup Bk	26	11	4	11	45-54	37
+7	Union	26	11	1	14	40-54	34
+8	Vigerslev Bk.	26	10	2	14	39-57	32
+9	Fremad Valby	26	9	4	13	66-69	31
+10	Frem	26	9	2	15	49-74	29
+11	Dragør Bk.	26	8	4	14	59-67	28
+12	B.1960	26	7	4	15	37-66	25
+13	KFUM	26	6	5	15	35-54	23
+14	PI Fodbold	26	4	3	19	38-84	15
