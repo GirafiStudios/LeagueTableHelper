@@ -12,8 +12,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class LeagueTablesHelper {
-    public static final int YEAR_START = 2024;
-    public static final int YEAR_END = 2025;
+    public static final int YEAR_START = 2025;
+    public static final int YEAR_END = 2026;
 
     public static void main(String[] args) {
         try {
