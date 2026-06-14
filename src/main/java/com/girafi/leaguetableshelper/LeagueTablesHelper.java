@@ -17,7 +17,7 @@ public class LeagueTablesHelper {
 
     public static void main(String[] args) {
         try {
-            System.out.println("Choose a type: (Format | Sort | Combine | Merge | JS | DS): ");
+            System.out.println("Choose a type: (Format | Sort | Combine | Merge | Playable | JS | DS): ");
             Scanner scanner = new Scanner(System.in);
             String input = scanner.nextLine();
             if (input.equalsIgnoreCase("format") || input.equalsIgnoreCase("simple") || input.equalsIgnoreCase("ks") || input.equalsIgnoreCase("fs")) {
@@ -32,7 +32,7 @@ public class LeagueTablesHelper {
                     placing++;
                     entry.print(placing);
                 }
-            } else if (input.equalsIgnoreCase("merge") || input.equalsIgnoreCase("js")) { //Only use Promotion/Relegation file for playable leagues.
+            } else if (input.equalsIgnoreCase("merge") || input.equalsIgnoreCase("playable") || input.equalsIgnoreCase("js")) { //Only use Promotion/Relegation file for playable leagues.
                 List<Entry> inputList = streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList());
                 merge(input, mergeLists(streamCSV("MergePromotion.txt").map(Entry::fromCSV).toList(), inputList), mergeLists(streamCSV("MergeRelegation.txt").map(Entry::fromCSV).toList(), inputList));
             } else if (input.equalsIgnoreCase("ds")) { //How to use: Put all teams in both groups for MergePromotion & Merge Relegation. Put the teams in the DS Pulje you need the league table for in Input

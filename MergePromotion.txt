@@ -1,10 +1,6 @@
-1	Vejgaard	28	21	3	4	81-31	66
-2	ASA, Aarhus	28	15	8	5	62-37	53
-3	Hedensted IF	28	14	7	7	71-46	49
-4	Esbjerg fB	28	14	6	8	65-52	48
-5	SfB-Oure FA	28	13	7	8	53-48	46
-6	Marienlyst	28	13	6	9	55-48	45
-7	Aarhus Fremad	28	12	8	8	56-49	44
-8	Hobro IK	28	11	7	10	35-33	40
-9	Nørresundby FB	28	11	4	13	63-56	37
-10	OKS	28	8	8	12	52-58	32
+1	Nykøbing FC	32	26	5	1	80-23	83
+2	FA2000	32	16	7	9	42-32	55
+3	Næsby BK	32	16	5	11	63-50	53
+4	Brønshøj	32	11	10	11	48-57	43
+5	Vanløse	32	11	7	14	37-44	40
+6	Hørsholm-Usserød IK	32	9	6	17	47-63	33
