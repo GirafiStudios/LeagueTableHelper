@@ -35,7 +35,7 @@ public class LeagueTablesHelper {
             } else if (input.equalsIgnoreCase("merge") || input.equalsIgnoreCase("playable") || input.equalsIgnoreCase("js")) { //Only use Promotion/Relegation file for playable leagues.
                 List<Entry> inputList = streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList());
                 merge(input, mergeLists(streamCSV("MergePromotion.txt").map(Entry::fromCSV).toList(), inputList), mergeLists(streamCSV("MergeRelegation.txt").map(Entry::fromCSV).toList(), inputList));
-            } else if (input.equalsIgnoreCase("ds")) { //How to use: Put all teams in both groups for MergePromotion & Merge Relegation. Put the teams in the DS Pulje you need the league table for in Input
+            } else if (input.equalsIgnoreCase("ds")) { //How to use: Put all teams in from Promotion/Relegation Stages in MergePromotion & Merge Relegation. Put the relevant teams for the DS Group the League Table is needed for in Input.
                 List<Entry> inputList = streamCSV("Input.txt").map(Entry::fromCSV).collect(Collectors.toList());
                 List<String> inputNames = inputList.stream().map(entry -> entry.name).toList();
                 List<Entry> fullPromotion = mergeLists(streamCSV("MergePromotion.txt").map(Entry::fromCSV).toList(), new ArrayList<>());
